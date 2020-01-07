@@ -1,3 +1,80 @@
 body {
   margin: 0;
 }
+
+h1 {
+  text-align: center;
+}
+
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 25px auto;
+  width: 708px;
+}
+
+.calendar div {
+  display: none;
+  width: 100px;
+  height: 100px;
+  margin-left: 1px;
+  margin-top: 1px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  background: #eee;
+  font-size: 30px;
+  line-height: 100px;
+  text-align: center;
+  transition: 0.3s ease-out;
+  cursor: pointer;
+}
+
+.calendar div:hover {
+  position: relative;
+  transform: translateY(-20px);
+  background: pink;
+}
+
+$days:
+  "mon" 0,
+  "tue" 102px,
+  "wed" 203px,
+  "thu" 304px,
+  "fri" 405px,
+  "sat" 506px,
+  "sun" 607px;
+
+@each $day, $mr in $days {
+  .calendar-#{$day} div:first-child {
+    margin-left: $mr;
+  }
+}
+
+@for $i from 28 through 31 {
+  .calendar-#{$i} div:nth-child(-n+#{$i}) {
+    display: block;
+  }
+}
+
+@for $i from 1 through 31 {
+  .calendar div:nth-child(#{$i})::after {
+    content: "#{$i}";
+  }
+}
+
+.wrapper {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 40px;
+}
+
+.wave {
+  color: #252323;
+  animation: 1s color infinite;
+}
+
+@keyframes color {
+  50% {
+    color: #8fc8ae;
+  }
+}
