@@ -11,8 +11,8 @@
 10. `git add . && git commit -m 'solution'` to save your chages
 11. `git push origin develop` - to send you code for PR
 12. Create a Pull Request (PR) from your branch `develop` to branch `master` of original repo.
-13. Replace `<your_account>` with your Github username in the 
-  [DEMO LINK](https://<your_account>.github.io/layout_calendar/)
+13. Replace `<your_account>` with your Github username in the
+  - [DEMO LINK](https://Al145.github.io/layout_calendar/)
 14. Copy `DEMO LINK` to the PR description
 
 > To update you PR repeat steps 7-11
@@ -47,5 +47,5 @@ Display a calendar in the middle of the screen. The HTML of the calendar needs t
   - (**Optional**) Move it up by `20px`.
   - (**Optional**) both of these properties are to be animated with the duration of half a second.
 
-## Here is a preview: 
+## Here is a preview:
 ![reference image](reference.png).
